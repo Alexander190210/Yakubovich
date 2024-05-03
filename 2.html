@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5 задание - Поле чудес</title>
+	<style type="text/css">
+		/* Главный див */
+		.letter{
+			font-size: 30px;
+			margin-left: 5px;
+			border-radius: 3px;
+			color: red;
+			border: 1px solid black;
+			padding: 10px;
+		}
+		.container {
+			width: 600px;
+
+		}
+		/* класс для правильной буквы 1 */
+		.letter1 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 2 */
+		.letter2 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 3 */
+		.letter3 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 4 */
+		.letter4 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 5 */
+		.letter5 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 6 */
+		.letter6 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* авт. отступы */
+		.mx-auto {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		/* DISPLAY FLEX */
+		.d-flex {
+			display: flex;
+		}
+		/* ШРИФТ Arial */
+		.ff-arial {
+			font-family: Arial;
+		}
+		/* фон светло-серый, почти белый */
+		.bg-light {
+			background-color: #f8f9fa;
+		}
+		/* фон желтый */
+		.bg-warning {
+			background-color: #ffc107;
+		}
+		/* ведущий Якубович */
+		.yakubovich {
+			background-image: url(1.png);
+			background-size: 100% 100%;
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			left: 0px;
+			top: 400px;
+		}
+	</style>
+</head>
+<body class="ff-arial">
+	<!-- Вопрос -->
+	<div class="bg-warning container mx-auto">
+		Этот струнный инструмент используют во многих стилях и направлениях музыки. Значительный вклад в музыкальную индустрию этот инструмент внес к середине 20 века.
+	</div>
+	<!-- Главный див -->
+	<div class="container mx-auto d-flex bg-light" style="margin-bottom: 100px;">
+		<div class="letter1">
+			<h1>Г</h1>
+		</div>
+		<div class="letter2">
+			<h1>И</h1>
+		</div>
+		<div class="letter3">
+			<h1>Т</h1>
+		</div>
+		<div class="letter4">
+			<h1>А</h1>
+		</div>
+		<div class="letter5">
+			<h1>Р</h1>
+		</div>
+		<div class="letter6">
+			<h1>А</h1>
+		</div>
+	</div>
+	<!-- Добавьте классы для букв сами -->
+			<span class="A letter" >A</span>
+	<span class="B letter">Б</span>
+	<span class="V letter">В</span>
+			<span class="G letter">Г</span>
+	<span class="D letter">Д</span>		
+	<span class="E letter">Е</span>	
+	<span class="EE letter">Ё</span>
+	<span class="GG letter">Ж</span>
+	<span class="Z letter">З</span>
+			<span class="I letter">И</span>
+	<span class="II letter">Й</span>
+	<span class="K letter">К</span>
+	<span class="L letter">Л</span>
+	<span class="M letter">М</span>
+	<span class="N letter">Н</span>
+	<span class="O letter">О</span>
+	<span class="P letter">П</span>
+			<span class="R letter">Р</span>
+	<span class="S letter">С</span>
+			<span class="T letter">Т</span>
+	<span class="Y letter">У</span>
+	<span class="F letter">Ф</span>
+	<span class="X letter">Х</span>
+	<span class="CC letter">Ц</span>
+	<span class="CH letter">Ч</span>
+	<span class="SH letter">Ш</span>
+	<span class="SS letter">Щ</span>
+	<span class="T- letter">Ъ</span>
+	<span class="III letter">Ы</span>
+	<span class="NONE letter">Ь</span>
+	<span class="EEE letter">Э</span>
+	<span class="YU letter">Ю</span>
+	<span class="YA letter">Я</span>
+	<!-- ведущий -->
+	<div class="yakubovich">
+	</div>
+	<script type="text/javascript">
+		/* Создай игру "Поле чудес".
+		1. Когда кликаешь на правильную букву алфавита, то открывается буква в слове.
+		2. Когда кликаешь на неправильную букву алфавита, то выходит всплывающее окно 'Неверно!'.
+		Вначале сделай, так чтобы работали клики на правильные буквы. Потом сделай, так чтобы работали клики на 1-2 неправильные буквы. На все 33 буквы алфавита, можно не делать. */
+			let score = 0
+			let BGColor = "orange"
+			let letter1 = document.querySelector(".letter1")
+		document.querySelector(".G").onclick = function() {
+			letter1.style.background = BGColor
+			score=score+1
+			if (score == 5){
+				alert("Ты выйграл")
+			}	
+		}
+			let letter2 = document.querySelector(".letter2")
+		document.querySelector(".I").onclick = function() {
+			letter2.style.background = BGColor
+			 score=score+1
+			if (score == 5){
+				alert("Ты выйграл")
+			}	
+		}
+			let letter3 = document.querySelector(".letter3")
+		document.querySelector(".T").onclick = function() {
+			letter3.style.background = BGColor 
+			score=score+1
+			if (score == 5){
+				alert("Ты выйграл")
+			}	
+		}
+			let letter6 = document.querySelector(".letter6")
+			let letter4 = document.querySelector(".letter4")
+		document.querySelector(".A").onclick = function() {
+			letter4.style.background = BGColor 
+			letter6.style.background = BGColor 
+			score=score+1
+			if (score == 5){
+				alert("Ты выйграл")
+			}	
+		}
+			let letter5 = document.querySelector(".letter5")
+		document.querySelector(".R").onclick = function() {
+			letter5.style.background = BGColor 
+			score=score+1
+			if (score == 5){
+				alert("Ты выйграл")
+			}	
+		}
+
+
+		document.querySelector(".B").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".V").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".D").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".E").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".EE").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".GG").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".Z").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".II").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".K").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".L").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".M").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".N").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".O").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".P").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".S").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".Y").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".F").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".X").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".CC").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".CH").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".SH").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".SS").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".T-").onclick = function(){
+			alert("Неверно")
+		}	
+			document.querySelector(".NONE").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".III").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".EEE").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".YU").onclick = function(){
+			alert("Неверно")
+		}
+				document.querySelector(".YA").onclick = function(){
+			alert("Неверно")
+		}
+	</script>
+</body>
+</html>
